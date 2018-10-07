@@ -4,8 +4,7 @@
 #
 #    pip-compile --output-file requirements.txt requirements.in
 #
---extra-index-url http://artpro.digitalglobe.com/artifactory/api/pypi/python-libraries/simple
---trusted-host artpro.digitalglobe.com
+
 
 click==7.0                # via flask
 flask-wtf==0.14.2

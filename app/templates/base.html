@@ -1,20 +1,27 @@
 <html>
     <head>
         {% if title %}
-        <title>{{ title }} - Microblog</title>
+        <title>{{ title }} - microblog</title>
         {% else %}
-        <title>Welcome to Microblog</title>
+        <title>microblog</title>
         {% endif %}
     </head>
     <body>
-       <div>
-         Microblog:
-         <a href="/index">Home</a>
-         <a href="/login">Login</a>
-       </div>
-    <!--    <h1>Hi, {{ user.username }}!</h1> 
-        {% for post in posts %}
-        <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
-        {% endfor %} -->
+        <div>
+            Microblog:
+            <a href="/index">Home</a>
+            <a href="/login">Login</a>
+        </div>
+        <hr>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <ul>
+            {% for message in messages %}
+            <li>{{ message }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+        {% endwith %}
+        {% block content %}{% endblock %}
     </body>
-</html>        
+</html>
