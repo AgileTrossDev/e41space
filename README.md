@@ -1,20 +1,26 @@
-***E41***
+#E41
 
-Evolving microblog
+Evolving microblog powered by a Python and Flask.
 
 
-**INSTALL**
+##INSTALL
 
 ```
 python -m venv venv
+pip-compile requirements.in
+pip-compile requirements-dev.in
 pip install -r requirements.txt
 pip install -r requirements-dev.txt
 ```
 
-**Execution**
+##Execution
 `bin/launch`
 
 
-**REFERENCE**:
+##Database
+`bin/db_update`
+
+
+##REFERENCE:
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world

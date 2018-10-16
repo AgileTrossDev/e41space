@@ -1,0 +1,4 @@
+#!/bin/bash
+export FLASK_APP=e41.py
+flask db migrate -m "followers"
+flask db upgrade

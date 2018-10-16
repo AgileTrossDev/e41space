@@ -2,5 +2,4 @@
 export FLASK_APP=e41.py
 export FLASK_DEBUG=0  # TODO: Make dynamic based on deployed location
 source env/.env
-printenv
 flask run
