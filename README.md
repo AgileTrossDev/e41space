@@ -24,3 +24,16 @@ pip install -r requirements-dev.txt
 ##REFERENCE:
 
 https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world
+
+
+##Development Tricks
+
+**Open Flask Shell**
+```
+export FLASK_APP=e41.py
+flask shell
+```
+
+**Emulated email server**
+
+`python -m smtpd -n -c DebuggingServer localhost:8025`
