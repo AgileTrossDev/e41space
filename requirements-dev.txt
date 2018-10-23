@@ -4,6 +4,10 @@
 #
 #    pip-compile --output-file requirements-dev.txt requirements-dev.in
 #
+--index-url https://artpro.digitalglobe.com/artifactory/api/pypi/pypi/simple
+--extra-index-url https://artpro.digitalglobe.com/artifactory/api/pypi/python-libraries/simple
+--trusted-host artpro.digitalglobe.com
+
 atomicwrites==1.2.1       # via pytest
 attrs==18.2.0             # via pytest
 more-itertools==4.3.0     # via pytest

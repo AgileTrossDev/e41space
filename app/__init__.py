@@ -1,11 +1,13 @@
 # Flask and it's extentions are declared here for the App.
 from flask import Flask
+from flask import request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
 from flask_login import LoginManager
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
+from flask_babel import Babel
 import logging
 from logging.handlers import SMTPHandler
 from logging.handlers import RotatingFileHandler
@@ -21,7 +23,7 @@ login = LoginManager(app)
 login.login_view = 'login'
 mail = Mail(app)
 bootstrap = Bootstrap(app)
-
+babel = Babel(app)
 
 
 if not app.debug:
@@ -53,6 +55,9 @@ if not app.debug:
         app.logger.info('Microblog startup')
 
 
+babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
 
 # Import here to avoid circular dependancies
 from app import routes, models, errors
